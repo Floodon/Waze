@@ -10,7 +10,7 @@ int main()
   
   TableauDynamique m;
   
-  m.add(p);
+  m.add(&p);
   
   return 0;
 }

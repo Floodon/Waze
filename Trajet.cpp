@@ -40,6 +40,7 @@ using namespace std;
   
   void Trajet::afficher()
   {
+    cout << ville_depart << endl;
   }
 
 
