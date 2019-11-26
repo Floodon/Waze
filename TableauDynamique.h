@@ -36,7 +36,7 @@ public:
     // Contrat :
     //
     
-    void add(  rajet nouveau_trajet )
+    void add( Trajet nouveau_trajet);
   // augmente la taille du tableau d'un et ajoute le nouvelle élèment
 
 

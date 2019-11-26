@@ -1,4 +1,4 @@
-/*************************************************************************
+        /*************************************************************************
                            Trajet  -  description
                              -------------------
     début                : $DATE$
@@ -29,19 +29,19 @@ class Trajet
 public:
 //----------------------------------------------------- Méthodes publiques
 
-    char* getVilleDepart()
+    char* getVilleDepart();
   // retourne la ville de depart saisie
  
-    char* getVilleArrivee()
+    char* getVilleArrivee();
   // retourne la ville d'arrivee saisie
     
-    virtual void afficher()
+    virtual void afficher();
   // afficher les ville de depart et d'arrivee
     
     
 //-------------------------------------------- Constructeurs - destructeur
 
-    Trajet ( char* ville_depart, char* ville_arrivee) : this -> ville_depart(ville_depart), this -> ville_arrivee(ville_arrivee){}
+    Trajet ( char* ville_depart, char* ville_arrivee);
     // Mode d'emploi :
     //    Crée les ville de depart et d'arrivee
     // Contrat :

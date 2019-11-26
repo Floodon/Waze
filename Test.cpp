@@ -3,7 +3,7 @@
 using namespace std;
 #include <iostream>
 
-void main()
+int main()
 {
   
   Trajet p("e","w");

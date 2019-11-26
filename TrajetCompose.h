@@ -7,8 +7,8 @@
 *************************************************************************/
 
 //---------- Interface de la classe <TrajetCompose> (fichier TrajetCompose.h) ----------------
-#if ! defined ( XXX_H )
-#define XXX_H
+#if ! defined ( TRAJETCOMPOSE_H )
+#define TRAJETCOMPOSE_H
 
 //--------------------------------------------------- Interfaces utilisées
 
@@ -17,7 +17,7 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Xxx>
+// Rôle de la classe <TrajetCompose>
 //
 //
 //------------------------------------------------------------------------
@@ -39,13 +39,13 @@ public:
 
 //-------------------------------------------- Constructeurs - destructeur
 
-    Xxx ( );
+    TrajetCompose ( );
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~Xxx ( );
+    virtual ~TrajetCompose ( );
     // Mode d'emploi :
     //
     // Contrat :
@@ -62,7 +62,7 @@ protected:
 
 };
 
-//-------------------------------- Autres définitions dépendantes de <Xxx>
+//-------------------------------- Autres définitions dépendantes de <TrajetCompose>
 
-#endif // XXX_H
+#endif // TRAJETCOMPOSE_H
 
