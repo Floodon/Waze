@@ -1,12 +1,12 @@
 /*************************************************************************
-                           TableauDynamique  -  description
+                           TrajetSimple  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Réalisation de la classe <TableauDynamique> (fichier TableauDynamique.cpp) ------------
+//---------- Réalisation de la classe <TrajetSimple> (fichier TrajetSimple.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@ using namespace std;
 #include <iostream>
 
 //------------------------------------------------------ Include personnel
-#include "TableauDynamique.h"
+#include "TrajetSimple.h"
 #include "Trajet.h"
 
 //------------------------------------------------------------- Constantes
@@ -23,66 +23,32 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type TableauDynamique::Méthode ( liste des paramètres )
+// type TrajetSimple::Méthode ( liste des paramètres )
 // Algorithme :
 //
 //{
 //} //----- Fin de Méthode
 
-  void TableauDynamique::add( Trajet* nouveau_trajet)
-  {
-    carsize +=1;
-    
-    Trajet** tableau_copie = new Trajet*[carsize];
-    
-    if (carsize != 0)
+    void TrajetSimple::afficher()
     {
-        for (int i = 0; i < carsize - 1; i++)
-      {
-        tableau_copie[i] = tableau[i];
-      }
+      cout << "de " << ville_depart << " à " << ville_arrivee << " en " << moyen_transport;
     }
-    
-    tableau_copie[carsize-1] = nouveau_trajet;
-    
-    delete(tableau);
-    
-    tableau = tableau_copie;
-    
-    
-    tableau[carsize - 1]->afficher();
-      
-  }
-      
-  
-
-
-
 
 //-------------------------------------------- Constructeurs - destructeur
 
-TableauDynamique::TableauDynamique ()
+TrajetSimple::TrajetSimple ( char* mt, char* ville_depart, char* ville_arrivee): Trajet(ville_depart, ville_arrivee), moyen_transport(mt)
+{
+} //----- Fin de TrajetSimple
+
+
+TrajetSimple::~TrajetSimple ( )
 // Algorithme :
 //
 {
-  carsize = 0;
-  
-  tableau = new Trajet* [carsize];
-  
-  //Trajet tableau[]
-} //----- Fin de TableauDynamique
-
-
-TableauDynamique::~TableauDynamique ()
-// Algorithme :
-//
-{
-  delete(tableau);
-  
 #ifdef MAP
-    cout << "Appel au destructeur de <TableauDynamique>" << endl;
+    cout << "Appel au destructeur de <TrajetSimple>" << endl;
 #endif
-} //----- Fin de ~TableauDynamique
+} //----- Fin de ~TrajetSimple
 
 
 //------------------------------------------------------------------ PRIVE

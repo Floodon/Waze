@@ -36,7 +36,7 @@ public:
     // Contrat :
     //
     
-    void add( Trajet nouveau_trajet);
+    void add( Trajet* nouveau_trajet);
   // augmente la taille du tableau d'un et ajoute le nouvelle élèment
 
 
@@ -65,7 +65,7 @@ protected:
 
   int carsize;
   
-  Trajet tableau[];
+  Trajet** tableau;
   
   
 

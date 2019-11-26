@@ -1,12 +1,12 @@
 /*************************************************************************
-                           TableauDynamique  -  description
+                           Xxx  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Réalisation de la classe <TableauDynamique> (fichier TableauDynamique.cpp) ------------
+//---------- Réalisation de la classe <Xxx> (fichier Xxx.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -15,74 +15,57 @@ using namespace std;
 #include <iostream>
 
 //------------------------------------------------------ Include personnel
-#include "TableauDynamique.h"
-#include "Trajet.h"
+#include "Xxx.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type TableauDynamique::Méthode ( liste des paramètres )
+// type Xxx::Méthode ( liste des paramètres )
 // Algorithme :
 //
 //{
 //} //----- Fin de Méthode
 
-  void TableauDynamique::add( Trajet* nouveau_trajet)
-  {
-    carsize +=1;
-    
-    Trajet** tableau_copie = new Trajet*[carsize];
-    
-    if (carsize != 0)
-    {
-        for (int i = 0; i < carsize - 1; i++)
-      {
-        tableau_copie[i] = tableau[i];
-      }
-    }
-    
-    tableau_copie[carsize-1] = nouveau_trajet;
-    
-    delete(tableau);
-    
-    tableau = tableau_copie;
-    
-    
-    tableau[carsize - 1]->afficher();
-      
-  }
-      
-  
 
-
+//------------------------------------------------- Surcharge d'opérateurs
+Xxx & Xxx::operator = ( const Xxx & unXxx )
+// Algorithme :
+//
+{
+} //----- Fin de operator =
 
 
 //-------------------------------------------- Constructeurs - destructeur
-
-TableauDynamique::TableauDynamique ()
+Xxx::Xxx ( const Xxx & unXxx )
 // Algorithme :
 //
 {
-  carsize = 0;
-  
-  tableau = new Trajet* [carsize];
-  
-  //Trajet tableau[]
-} //----- Fin de TableauDynamique
-
-
-TableauDynamique::~TableauDynamique ()
-// Algorithme :
-//
-{
-  delete(tableau);
-  
 #ifdef MAP
-    cout << "Appel au destructeur de <TableauDynamique>" << endl;
+    cout << "Appel au constructeur de copie de <Xxx>" << endl;
 #endif
-} //----- Fin de ~TableauDynamique
+} //----- Fin de Xxx (constructeur de copie)
+
+
+Xxx::Xxx ( )
+// Algorithme :
+//
+{
+#ifdef MAP
+    cout << "Appel au constructeur de <Xxx>" << endl;
+#endif
+} //----- Fin de Xxx
+
+
+Xxx::~Xxx ( )
+// Algorithme :
+//
+{
+#ifdef MAP
+    cout << "Appel au destructeur de <Xxx>" << endl;
+#endif
+} //----- Fin de ~Xxx
 
 
 //------------------------------------------------------------------ PRIVE

@@ -1,28 +1,28 @@
 /*************************************************************************
-                           TrajetSimple  -  description
+                           Xxx  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Interface de la classe <TrajetSimple> (fichier TrajetSimple.h) ----------------
-#if ! defined ( TRAJETSIMPLE_H )
-#define TRAJETSIMPLE_H
+//---------- Interface de la classe <Xxx> (fichier Xxx.h) ----------------
+#if ! defined ( XXX_H )
+#define XXX_H
 
 //--------------------------------------------------- Interfaces utilisées
-#include "Trajet.h"
+
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <TrajetSimple>
+// Rôle de la classe <Xxx>
 //
 //
 //------------------------------------------------------------------------
 
-class TrajetSimple : public Trajet
+class Xxx : public Ancetre
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -33,21 +33,30 @@ public:
     //
     // Contrat :
     //
-    
-    virtual void afficher();
-  // afficher la ville de depart, d'arrivee ainsi que le moyen de transport
 
 
-//-------------------------------------------- Constructeurs - destructeur
-
-
-    TrajetSimple ( char* moyen_transport, char* ville_depart, char* ville_arrivee);
+//------------------------------------------------- Surcharge d'opérateurs
+    Xxx & operator = ( const Xxx & unXxx );
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~TrajetSimple ( );
+
+//-------------------------------------------- Constructeurs - destructeur
+    Xxx ( const Xxx & unXxx );
+    // Mode d'emploi (constructeur de copie) :
+    //
+    // Contrat :
+    //
+
+    Xxx ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
+
+    virtual ~Xxx ( );
     // Mode d'emploi :
     //
     // Contrat :
@@ -60,9 +69,9 @@ protected:
 
 //----------------------------------------------------- Attributs protégés
 
-char* moyen_transport;
-
 };
 
-#endif // TRAJETSIMPLE_H
+//-------------------------------- Autres définitions dépendantes de <Xxx>
+
+#endif // XXX_H
 

@@ -38,7 +38,7 @@ using namespace std;
     return this -> ville_arrivee;
   }
   
-  virtual void Trajet::afficher()
+  void Trajet::afficher()
   {
   }
 
@@ -47,8 +47,8 @@ using namespace std;
 
 Trajet::Trajet ( char* ville_depart, char* ville_arrivee)
 {
-  this -> ville_depart(ville_depart);
-  this -> ville_arrivee(ville_arrivee);
+  this->ville_depart = ville_depart;
+  this -> ville_arrivee = ville_arrivee;
 
 } //----- Fin de Trajet
 
