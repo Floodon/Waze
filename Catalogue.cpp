@@ -14,7 +14,7 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void Catalogue::addTrajet(Trajet t) {
+void Catalogue::addTrajet(Trajet* t) {
     this->liste_trajet.add(t);
 }
 
@@ -22,8 +22,7 @@ void Catalogue::addTrajet(Trajet t) {
 Catalogue::Catalogue () {}
 //----- Fin de Catalogue (constructeur)
 
-Catalogue::~Catalogue () {}
-} //----- Fin de ~Catalogue
+Catalogue::~Catalogue () {} //----- Fin de ~Catalogue
 
 
 //------------------------------------------------------------------ PRIVE

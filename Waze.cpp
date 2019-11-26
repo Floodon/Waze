@@ -13,9 +13,9 @@ using namespace std;
 //------------------------------------------------------------- Constantes
 
 int main(void) {
-        Catalogue catalogue;
-        char* villeA;
-        char* villeB;
+        TableauDynamique catalogue;
+        char* villeA = new char[60];
+        char* villeB = new char[60];
         while(1) {
         cout << "menu:\n" << endl;
         cout << "\t0: quitter" << endl;
@@ -34,7 +34,7 @@ int main(void) {
                 cout << "\tVille arrivee: ";
                 cin >> villeB;
                 Trajet t(villeA,villeB);
-                catalogue.addTrajet(t);
+                catalogue.add(&t);
             }
                 break;
             /*case 2:

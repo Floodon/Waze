@@ -16,7 +16,7 @@ class Catalogue {
 public:
 //----------------------------------------------------- Méthodes publiques
 
-    void addTrajet(Trajet t);
+    void addTrajet(Trajet* t);
 
 //-------------------------------------------- Constructeurs - destructeur
     Catalogue ();
