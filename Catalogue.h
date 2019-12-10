@@ -16,7 +16,10 @@ class Catalogue {
 public:
 //----------------------------------------------------- Méthodes publiques
 
-    void addTrajet(Trajet* t);
+    void addTrajet(char* mt, char* villeA, char* villeB);
+    TableauDynamique getListeTrajet();
+    int getNbTrajets();
+    void afficher();
 
 //-------------------------------------------- Constructeurs - destructeur
     Catalogue ();

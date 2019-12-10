@@ -16,6 +16,7 @@ using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "Trajet.h"
+#include<string.h>
 
 //------------------------------------------------------------- Constantes
 
@@ -37,25 +38,25 @@ using namespace std;
   {
     return this -> ville_arrivee;
   }
-  
-  void Trajet::afficher()
-  {
-    cout << ville_depart << endl;
+
+  void Trajet::afficher() const {
   }
-
-
 //-------------------------------------------- Constructeurs - destructeur
 
 Trajet::Trajet ( char* ville_depart, char* ville_arrivee)
 {
-  this->ville_depart = ville_depart;
-  this -> ville_arrivee = ville_arrivee;
+  this-> ville_depart = new char[60];
+  strcpy(this->ville_depart,ville_depart);
+  this-> ville_arrivee = new char[60];
+  strcpy(this->ville_arrivee,ville_arrivee);
 
 } //----- Fin de Trajet
 
 
 Trajet::~Trajet ( )
 {
+  delete[](ville_arrivee);
+  delete[](ville_depart);
 #ifdef MAP
     cout << "Appel au destructeur de <Trajet>" << endl;
 #endif

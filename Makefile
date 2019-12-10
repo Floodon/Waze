@@ -5,7 +5,7 @@ OFILES = Waze.o \
 		 Trajet.o \
 		 Catalogue.o \
 		 TableauDynamique.o \
-		 TrajetSimple.o
+		 TrajetSimple.o \
 		 ###TrajetCompose.o \###
 
 ### BUT ###

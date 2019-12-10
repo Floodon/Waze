@@ -16,7 +16,7 @@ using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "TableauDynamique.h"
-#include "Trajet.h"
+#include "TrajetSimple.h"
 
 //------------------------------------------------------------- Constantes
 
@@ -29,7 +29,7 @@ using namespace std;
 //{
 //} //----- Fin de Méthode
 
-  void TableauDynamique::add( Trajet* nouveau_trajet)
+  void TableauDynamique::add(char* mt, char* villeA, char* villeB)
   {
     carsize +=1;
     
@@ -39,21 +39,29 @@ using namespace std;
     {
         for (int i = 0; i < carsize - 1; i++)
       {
+
         tableau_copie[i] = tableau[i];
       }
     }
+    tableau_copie[carsize-1] = new TrajetSimple(mt,villeA,villeB);
     
-    tableau_copie[carsize-1] = nouveau_trajet;
+    delete[](tableau);
     
-    delete(tableau);
-    
+    tableau = new Trajet*[carsize];
     tableau = tableau_copie;
-    
-    
-    tableau[carsize - 1]->afficher();
       
   }
+  
+  int TableauDynamique::getCarsize() {
+    return this->carsize;
+  }
       
+  Trajet* TableauDynamique::getTrajet(int n) {
+    if(n>=0 && n<this->carsize)
+      return this->tableau[n];
+    else 
+      cout << "pas de trajet pour cet index" << endl;
+  } 
   
 
 
@@ -68,8 +76,6 @@ TableauDynamique::TableauDynamique ()
   carsize = 0;
   
   tableau = new Trajet* [carsize];
-  
-  //Trajet tableau[]
 } //----- Fin de TableauDynamique
 
 

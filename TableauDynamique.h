@@ -36,7 +36,9 @@ public:
     // Contrat :
     //
     
-    void add( Trajet* nouveau_trajet);
+    void add(char* mt, char* villeA, char* villeB);
+    int getCarsize();
+    Trajet* getTrajet(int n);
   // augmente la taille du tableau d'un et ajoute le nouvelle élèment
 
 

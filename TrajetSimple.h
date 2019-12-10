@@ -34,7 +34,7 @@ public:
     // Contrat :
     //
     
-    virtual void afficher();
+    void afficher() const;
   // afficher la ville de depart, d'arrivee ainsi que le moyen de transport
 
 

@@ -8,14 +8,15 @@ using namespace std;
 
 //--------------------------------------------------------------- Includes
 #include "Catalogue.h"
-#include "Trajet.h"
+#include "TrajetSimple.h"
 
 //------------------------------------------------------------- Constantes
 
 int main(void) {
-        TableauDynamique catalogue;
+        Catalogue catalogue;
         char* villeA = new char[60];
         char* villeB = new char[60];
+        char* mt = new char[60];
         while(1) {
         cout << "menu:\n" << endl;
         cout << "\t0: quitter" << endl;
@@ -33,8 +34,9 @@ int main(void) {
                 cin >> villeA;
                 cout << "\tVille arrivee: ";
                 cin >> villeB;
-                Trajet t(villeA,villeB);
-                catalogue.add(&t);
+                cout << "\tMoyen Transport: ";
+                cin >> mt;
+                catalogue.addTrajet(mt, villeA, villeB);
             }
                 break;
             /*case 2:
@@ -52,6 +54,8 @@ int main(void) {
                 }
                 catalogue.addTrajet(t);
                 break;*/
+            case 3:
+                catalogue.afficher();
             default:
                 cout < "choix incorrect\n";
                 continue ;

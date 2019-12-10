@@ -35,7 +35,7 @@ public:
     char* getVilleArrivee();
   // retourne la ville d'arrivee saisie
     
-    virtual void afficher();
+    virtual void afficher() const;
   // afficher les ville de depart et d'arrivee
     
     
