@@ -28,38 +28,29 @@ using namespace std;
 //{
 //} //----- Fin de Méthode
 
-    void TrajetCompose::addTrajet (Trajet nouveau_trajet_simple)
-    {
-      
-      if (carsize == 0)
-      {
-        liste_trajet.add(nouveau_trajet_simple);
-      }
-      else
-      {
-        ville_de_depart = getVilleDepart()
-        
-        if (liste_trajet[carsize-1].ville_arrivee == ville_de_depart)
-        {
-          liste_trajet.add(nouveau_trajet_simple);
-        }
-      }
+void TrajetCompose::addTrajet(TrajetSimple* t) {
+    this->liste_trajet.add(t);
+}
+
+void TrajetCompose::afficher() {
+    int i;
+    for(i=0;i<this->liste_trajet.getCarsize();i++) {
+      this->liste_trajet.getTrajet(i)->afficher();
+      cout << "--";
     }
+}
 
 
 
 
 //-------------------------------------------- Constructeurs - destructeur
 
-TrajetCompose::TrajetCompose ( ):
-// Algorithme :
+TrajetCompose::TrajetCompose ( )
+// Algorithme :  
 //
 
 {
-  carsize = 0;
-  
-  liste_trajet = new TableauDynamique[carsize];
-
+    this-> liste_trajet = *(new TableauDynamique());
 } //----- Fin de TrajetCompose
 
 

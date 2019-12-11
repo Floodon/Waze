@@ -16,7 +16,7 @@ class Catalogue {
 public:
 //----------------------------------------------------- Méthodes publiques
 
-    void addTrajet(char* mt, char* villeA, char* villeB);
+    void addTrajet(Trajet* t);
     TableauDynamique getListeTrajet();
     int getNbTrajets();
     void afficher();

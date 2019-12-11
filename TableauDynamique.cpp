@@ -29,7 +29,7 @@ using namespace std;
 //{
 //} //----- Fin de Méthode
 
-  void TableauDynamique::add(char* mt, char* villeA, char* villeB)
+  void TableauDynamique::add(Trajet* t)
   {
     carsize +=1;
     
@@ -43,14 +43,16 @@ using namespace std;
         tableau_copie[i] = tableau[i];
       }
     }
-    tableau_copie[carsize-1] = new TrajetSimple(mt,villeA,villeB);
+    tableau_copie[carsize-1] = t;
     
     delete[](tableau);
     
     tableau = new Trajet*[carsize];
     tableau = tableau_copie;
+
       
   }
+
   
   int TableauDynamique::getCarsize() {
     return this->carsize;

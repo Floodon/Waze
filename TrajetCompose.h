@@ -12,7 +12,7 @@
 
 //--------------------------------------------------- Interfaces utilisées
 #include "TableauDynamique.h"
-#include "Trajet.h"
+#include "TrajetSimple.h"
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
@@ -35,12 +35,13 @@ public:
     // Contrat :
     //
     
-    void addTrajet (Trajet nouveau_trajet_simple);
+    void addTrajet(TrajetSimple* t);
+    void afficher() ;
 
 
 //-------------------------------------------- Constructeurs - destructeur
 
-    TrajetCompose ( );
+    TrajetCompose ();
     // Mode d'emploi :
     //
     // Contrat :
@@ -58,8 +59,6 @@ protected:
 //----------------------------------------------------- Méthodes protégées
 
   TableauDynamique liste_trajet;
-  
-  int carsize;
   
 
 //----------------------------------------------------- Attributs protégés

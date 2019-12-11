@@ -35,7 +35,7 @@ public:
     char* getVilleArrivee();
   // retourne la ville d'arrivee saisie
     
-    virtual void afficher() const;
+    virtual void afficher();
   // afficher les ville de depart et d'arrivee
     
     
@@ -46,6 +46,8 @@ public:
     //    Crée les ville de depart et d'arrivee
     // Contrat :
     //
+
+    Trajet();
 
     virtual ~Trajet ( );
     // Mode d'emploi :

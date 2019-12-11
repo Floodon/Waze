@@ -39,7 +39,7 @@ using namespace std;
     return this -> ville_arrivee;
   }
 
-  void Trajet::afficher() const {
+  void Trajet::afficher() {
   }
 //-------------------------------------------- Constructeurs - destructeur
 
@@ -51,6 +51,11 @@ Trajet::Trajet ( char* ville_depart, char* ville_arrivee)
   strcpy(this->ville_arrivee,ville_arrivee);
 
 } //----- Fin de Trajet
+
+Trajet::Trajet() {
+    this-> ville_depart = new char[60];
+    this-> ville_arrivee = new char[60];
+}
 
 
 Trajet::~Trajet ( )

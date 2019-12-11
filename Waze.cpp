@@ -5,10 +5,12 @@
 //-------------------------------------------------------- Include système
 using namespace std;
 #include <iostream>
+#include<string.h>
 
 //--------------------------------------------------------------- Includes
 #include "Catalogue.h"
 #include "TrajetSimple.h"
+#include "TrajetCompose.h"
 
 //------------------------------------------------------------- Constantes
 
@@ -36,24 +38,28 @@ int main(void) {
                 cin >> villeB;
                 cout << "\tMoyen Transport: ";
                 cin >> mt;
-                catalogue.addTrajet(mt, villeA, villeB);
+                TrajetSimple* t = new TrajetSimple(mt,villeA,villeB);
+                catalogue.addTrajet(t);
             }
                 break;
-            /*case 2:
-                TrajetCompose t;
+            case 2: {
+                TrajetCompose* t = new TrajetCompose();
                 while(1) {
                     cout << "0 pour quitter" << endl;
                     cout << "\tVille depart: ";
                     cin >> villeA;
-                    if(strcmp(villeA,"0"))
+                    if(!(strcmp(villeA,"0")))
                         break;
                     cout << "\tVille arrivee: ";
                     cin >> villeB;
-                    Trajet t_simple(villeA,villeB);
-                    t.add(t_simple);
+                    cout << "\tMoyen Transport: ";
+                    cin >> mt;
+                    t->addTrajet(new TrajetSimple(mt,villeA,villeB));
                 }
                 catalogue.addTrajet(t);
-                break;*/
+                t->afficher();
+            }
+                break;
             case 3:
                 catalogue.afficher();
             default:
@@ -62,4 +68,8 @@ int main(void) {
                 // revenir au menu
         }
     }
+    delete[](villeA);
+    delete[](villeB);
+    delete[](mt);
+
 }

@@ -31,9 +31,9 @@ using namespace std;
 //{
 //} //----- Fin de Méthode
 
-    void TrajetSimple::afficher() const
+    void TrajetSimple::afficher()
     {
-      cout << "de " << ville_depart << " à " << ville_arrivee << " en " << moyen_transport << endl;
+      cout << "de " << ville_depart << " à " << ville_arrivee << " en " << moyen_transport;
     }
 
 //-------------------------------------------- Constructeurs - destructeur

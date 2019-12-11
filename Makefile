@@ -6,7 +6,7 @@ OFILES = Waze.o \
 		 Catalogue.o \
 		 TableauDynamique.o \
 		 TrajetSimple.o \
-		 ###TrajetCompose.o \###
+		 TrajetCompose.o
 
 ### BUT ###
 
@@ -23,6 +23,8 @@ TrajetSimple:
 Catalogue.o: Trajet.h
 
 TableauDynamique.o: Trajet.h
+
+TrajetCompose: TableauDYnamique.h TrajetSimple.h
 
 ${EXE}: ${OFILES}
 		$(CC) $(CFLAGS) -o ${EXE} ${OFILES}
