@@ -40,6 +40,16 @@ void TrajetCompose::afficher() {
     }
 }
 
+void TrajetCompose::setVilleDepart() {
+    this->ville_depart = this->liste_trajet.getTrajet(0)->getVilleDepart();
+    cout << this->ville_depart << endl;
+}
+
+void TrajetCompose::setVilleArrivee() {
+    this->ville_arrivee = this->liste_trajet.getTrajet(this->liste_trajet.getCarsize()-1)->getVilleArrivee();
+    cout << this->ville_arrivee << endl;
+}
+
 
 
 

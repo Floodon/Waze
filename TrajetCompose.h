@@ -37,6 +37,8 @@ public:
     
     void addTrajet(TrajetSimple* t);
     void afficher() ;
+    void setVilleDepart();
+    void setVilleArrivee();
 
 
 //-------------------------------------------- Constructeurs - destructeur

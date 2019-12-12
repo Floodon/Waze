@@ -85,7 +85,7 @@ TableauDynamique::~TableauDynamique ()
 // Algorithme :
 //
 {
-  delete(tableau);
+
   
 #ifdef MAP
     cout << "Appel au destructeur de <TableauDynamique>" << endl;
